@@ -41,7 +41,7 @@ const categories = [
   {
     id: "escalators",
     title: "سلالم متحركة",
-    imageUrl: LOCAL_IMAGES.logo,
+    imageUrl: LOCAL_IMAGES.hero2,
   },
 ];
 
@@ -105,7 +105,7 @@ const products = [
     title: "Electric ladder",
     category: "escalators",
     tag: "منتج",
-    imageUrl: LOCAL_IMAGES.logo,
+    imageUrl: LOCAL_IMAGES.hero2,
     desc: "سلالم/منتجات كهربائية (واجهة فقط).",
     featuredRank: 7,
   },
