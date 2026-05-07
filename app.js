@@ -11,31 +11,37 @@ const SOCIALS = {
   youtube: "https://www.youtube.com/@atlaslifts3697",
 };
 
+const LOCAL_IMAGES = {
+  hero1: "./hero-1.png",
+  hero2: "./hero-2.png",
+  logo: "./logo.png",
+};
+
 const categories = [
   {
     id: "panorama",
     title: "بانورما",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/17_lritzfefqu.jpg",
+    imageUrl: LOCAL_IMAGES.hero1,
   },
   {
     id: "passenger",
     title: "مصاعد الركاب",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/16_bhktyffnks.jpg",
+    imageUrl: LOCAL_IMAGES.hero2,
   },
   {
     id: "goods",
     title: "مصاعد البضائع",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/15_dpjqsisoem.jpg",
+    imageUrl: LOCAL_IMAGES.hero1,
   },
   {
     id: "special",
     title: "مصاعد ذوي الاحتياجات الخاصة",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/11_lcocxtwqsj.jpg",
+    imageUrl: LOCAL_IMAGES.hero2,
   },
   {
     id: "escalators",
     title: "سلالم متحركة",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/2_xltngedrud.png",
+    imageUrl: LOCAL_IMAGES.logo,
   },
 ];
 
@@ -45,7 +51,7 @@ const products = [
     title: "Elevator 7",
     category: "panorama",
     tag: "جديد",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/17_lritzfefqu.jpg",
+    imageUrl: LOCAL_IMAGES.hero1,
     desc: "مثال منتج من الموقع (واجهة فقط).",
     featuredRank: 1,
   },
@@ -54,7 +60,7 @@ const products = [
     title: "Elevator 6",
     category: "passenger",
     tag: "الأحدث",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/16_bhktyffnks.jpg",
+    imageUrl: LOCAL_IMAGES.hero2,
     desc: "مثال منتج من الموقع (واجهة فقط).",
     featuredRank: 2,
   },
@@ -63,7 +69,7 @@ const products = [
     title: "Elevator 5",
     category: "goods",
     tag: "مميز",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/15_dpjqsisoem.jpg",
+    imageUrl: LOCAL_IMAGES.hero1,
     desc: "مثال منتج من الموقع (واجهة فقط).",
     featuredRank: 3,
   },
@@ -72,7 +78,7 @@ const products = [
     title: "Elevator 4",
     category: "passenger",
     tag: "مميز",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/14_sfgghquful.jpg",
+    imageUrl: LOCAL_IMAGES.hero2,
     desc: "مثال منتج من الموقع (واجهة فقط).",
     featuredRank: 4,
   },
@@ -81,7 +87,7 @@ const products = [
     title: "Elevator 3",
     category: "panorama",
     tag: "مميز",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/13_rnfmmufork.jpg",
+    imageUrl: LOCAL_IMAGES.hero1,
     desc: "مثال منتج من الموقع (واجهة فقط).",
     featuredRank: 5,
   },
@@ -90,7 +96,7 @@ const products = [
     title: "Elevator 2",
     category: "special",
     tag: "مميز",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/12_manwddjflx.jpg",
+    imageUrl: LOCAL_IMAGES.hero2,
     desc: "مثال منتج من الموقع (واجهة فقط).",
     featuredRank: 6,
   },
@@ -99,7 +105,7 @@ const products = [
     title: "Electric ladder",
     category: "escalators",
     tag: "منتج",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/2_xltngedrud.png",
+    imageUrl: LOCAL_IMAGES.logo,
     desc: "سلالم/منتجات كهربائية (واجهة فقط).",
     featuredRank: 7,
   },
@@ -108,7 +114,7 @@ const products = [
     title: "Elevator 1",
     category: "passenger",
     tag: "مميز",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/11_lcocxtwqsj.jpg",
+    imageUrl: LOCAL_IMAGES.hero2,
     desc: "مثال منتج من الموقع (واجهة فقط).",
     featuredRank: 8,
   },
@@ -118,22 +124,22 @@ const galleryItems = [
   {
     id: "g1",
     title: "مشروع 1",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/17_lritzfefqu.jpg",
+    imageUrl: LOCAL_IMAGES.hero1,
   },
   {
     id: "g2",
     title: "مشروع 2",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/16_bhktyffnks.jpg",
+    imageUrl: LOCAL_IMAGES.hero2,
   },
   {
     id: "g3",
     title: "مشروع 3",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/14_sfgghquful.jpg",
+    imageUrl: LOCAL_IMAGES.hero1,
   },
   {
     id: "g4",
     title: "مشروع 4",
-    imageUrl: "https://www.atlaslifts-sa.net/contents/products/0/13_rnfmmufork.jpg",
+    imageUrl: LOCAL_IMAGES.hero2,
   },
 ];
 
