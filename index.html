@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مصاعد أطلس | ATLAS</title>
+    <meta
+      name="description"
+      content="واجهة Static شبيهة بموقع Atlas Lifts (بدون Back-end) باستخدام HTML و CSS و JavaScript."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="top-strip" aria-label="شريط علوي">
+      <div class="container top-strip__inner">
+        <div class="top-strip__icons" aria-label="أيقونات">
+          <button class="tiny-ic" id="openSearch" type="button" aria-label="بحث">⌕</button>
+          <a class="tiny-ic" href="#products" aria-label="المنتجات">▦</a>
+          <a class="tiny-ic" href="#gallery" aria-label="المعرض">▢</a>
+          <a class="tiny-ic" href="#contact" aria-label="اتصل بنا">☎</a>
+        </div>
+        <div class="top-strip__socials" aria-label="روابط اجتماعية">
+          <a class="tiny-ic" id="xLink" href="#" target="_blank" rel="noopener" aria-label="X">X</a>
+          <a class="tiny-ic" id="igLink" href="#" target="_blank" rel="noopener" aria-label="Instagram"
+            >IG</a
+          >
+          <a class="tiny-ic" id="snapLink" href="#" target="_blank" rel="noopener" aria-label="Snapchat"
+            >SC</a
+          >
+          <a class="tiny-ic" id="ytLink" href="#" target="_blank" rel="noopener" aria-label="YouTube"
+            >YT</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header__inner">
+        <nav class="menu" aria-label="القائمة">
+          <a class="menu__link is-active" href="#home">الرئيسية</a>
+          <a class="menu__link" href="#products">منتجاتنا</a>
+          <a class="menu__link" href="#gallery">الصور</a>
+          <a class="menu__link" href="#media">المركز الإعلامي</a>
+          <a class="menu__link" href="#about">عن الشركة</a>
+          <a class="menu__link" href="#contact">تواصل معنا</a>
+        </nav>
+
+        <a class="logo" href="#home" aria-label="مصاعد أطلس">
+          <span class="logo__badge">ATLAS</span>
+          <span class="logo__name">مصاعد أطلس</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero hero--photo" aria-label="صورة رئيسية">
+        <div class="hero__photo" role="img" aria-label="صورة الشركة"></div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="container">
+          <div class="section__head section__head--split">
+            <div>
+              <h2 class="section__title">منتجاتنا</h2>
+              <p class="section__hint">
+                أقسام مثل الموقع الأصلي + قائمة أحدث المصاعد (فلترة وبحث بدون Back-end).
+              </p>
+            </div>
+            <div class="filters">
+              <div class="field">
+                <label class="field__label" for="query">بحث</label>
+                <input class="field__input" id="query" type="search" placeholder="اكتب اسم المنتج…" />
+              </div>
+              <div class="field">
+                <label class="field__label" for="categorySelect">القسم</label>
+                <select class="field__input" id="categorySelect"></select>
+              </div>
+              <div class="field">
+                <label class="field__label" for="sortSelect">ترتيب</label>
+                <select class="field__input" id="sortSelect">
+                  <option value="featured">الأحدث</option>
+                  <option value="titleAsc">الاسم: أ-ي</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid--categories" id="categoriesGrid" aria-label="أقسام المنتجات"></div>
+
+          <div class="section__subhead">
+            <h3 class="section__subtitle">المصاعد المضافة حديثًا</h3>
+            <a class="link" href="#contact">طلب تركيب</a>
+          </div>
+
+          <div class="grid grid--products" id="productsGrid" aria-label="المنتجات"></div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="gallery">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">معرض الصور</h2>
+            <p class="section__hint">تصفح معرض أعمال الشركة وأحدث المشاريع (واجهة عرض).</p>
+          </div>
+          <div class="grid grid--gallery" id="galleryGrid" aria-label="صور المعرض"></div>
+        </div>
+      </section>
+
+      <section class="section" id="media">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">المركز الإعلامي</h2>
+            <p class="section__hint">أخبار وإعلانات الشركة.</p>
+          </div>
+          <div class="grid grid--media" id="mediaGrid" aria-label="عناصر إعلامية"></div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="about">
+        <div class="container about">
+          <div class="about__copy">
+            <h2 class="section__title">عن الشركة</h2>
+            <p class="section__hint">
+              شركة متخصصة في بيع وتوريد وتركيب وصيانة المصاعد الكهربائية والهيدروليك والسلالم
+              المتحركة وفق معايير الجودة والسلامة.
+            </p>
+            <div class="bullets">
+              <div class="bullet">
+                <h3 class="bullet__t">Smart Solutions</h3>
+                <p class="bullet__p">ندرس الحلول المناسبة ونقدّم أفضل الخيارات لمنزلك أو منشأتك.</p>
+              </div>
+              <div class="bullet">
+                <h3 class="bullet__t">Elevator Installation</h3>
+                <p class="bullet__p">توريد وتركيب وتحديث المصاعد في الأبراج والفلل والمباني.</p>
+              </div>
+              <div class="bullet">
+                <h3 class="bullet__t">Elevator Maintenance</h3>
+                <p class="bullet__p">صيانة احترافية بفرق هندسية وفنية ذات خبرة.</p>
+              </div>
+              <div class="bullet">
+                <h3 class="bullet__t">Development & Follow-up</h3>
+                <p class="bullet__p">متابعة مستمرة وخدمة ما بعد البيع.</p>
+              </div>
+            </div>
+          </div>
+          <div class="about__card">
+            <div class="quote">
+              <p class="quote__p">
+                “نضمن جودة عالية للوصول بعملائنا إلى أعلى مستويات الأمان والسلامة.”
+              </p>
+              <div class="quote__by">ATLAS Elevators</div>
+            </div>
+            <div class="about__cta">
+              <a class="btn btn--primary" id="waCtaAbout" href="#" target="_blank" rel="noopener">
+                تواصل واتساب
+              </a>
+              <a class="btn btn--soft" href="#contact">إرسال رسالة</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container contact">
+          <div class="contact__info">
+            <h2 class="section__title">اتصل بنا</h2>
+            <p class="section__hint">بدون Back-end: هنفتح واتساب برسالة جاهزة أو روابط السوشيال.</p>
+            <div class="contact__rows">
+              <div class="contact__row">
+                <span class="muted">واتساب</span>
+                <a id="waLinkInline" class="link" href="#" target="_blank" rel="noopener">فتح محادثة</a>
+              </div>
+              <div class="contact__row">
+                <span class="muted">فروع</span>
+                <span>الرياض • جدة • الدمام • الأحساء</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact__form" id="contactForm">
+            <h3 class="contact__title">إرسال رسالة (واتساب)</h3>
+            <div class="field">
+              <label class="field__label" for="name">الاسم</label>
+              <input class="field__input" id="name" name="name" required />
+            </div>
+            <div class="field">
+              <label class="field__label" for="email">الإيميل</label>
+              <input class="field__input" id="email" name="email" type="email" required />
+            </div>
+            <div class="field">
+              <label class="field__label" for="phone">الجوال</label>
+              <input class="field__input" id="phone" name="phone" inputmode="tel" required />
+            </div>
+            <div class="field">
+              <label class="field__label" for="subject">الموضوع</label>
+              <input class="field__input" id="subject" name="subject" required />
+            </div>
+            <div class="field">
+              <label class="field__label" for="message">الرسالة</label>
+              <textarea class="field__input" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button class="btn btn--primary" type="submit">إرسال على واتساب</button>
+            <p class="muted small">لا يتم حفظ البيانات—فقط فتح واتساب بالرسالة.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <div>
+          <div class="logo logo--footer">
+            <span class="logo__badge">ATLAS</span>
+            <span class="logo__name">مصاعد أطلس</span>
+          </div>
+          <p class="muted small">
+            هذه نسخة Static مشابهة لواجهة الموقع الأصلي (Front-end فقط).
+          </p>
+        </div>
+
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h3 class="footer__title">روابط</h3>
+            <a class="footer__link" href="#products">منتجاتنا</a>
+            <a class="footer__link" href="#gallery">معرض الصور</a>
+            <a class="footer__link" href="#media">المركز الإعلامي</a>
+            <a class="footer__link" href="#about">عن الشركة</a>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__title">تواصل</h3>
+            <a class="footer__link" id="waLinkFooter" href="#" target="_blank" rel="noopener"
+              >واتساب</a
+            >
+            <div class="footer__socials">
+              <a class="social social--footer" id="xLinkFooter" href="#" target="_blank" rel="noopener"
+                >X</a
+              >
+              <a class="social social--footer" id="igLinkFooter" href="#" target="_blank" rel="noopener"
+                >IG</a
+              >
+              <a
+                class="social social--footer"
+                id="snapLinkFooter"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >SC</a
+              >
+              <a class="social social--footer" id="ytLinkFooter" href="#" target="_blank" rel="noopener"
+                >YT</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a class="wa-fab" id="waFab" href="#" aria-label="التواصل عبر واتساب" target="_blank" rel="noopener">
+      <span class="wa-fab__dot" aria-hidden="true"></span>
+      <span class="wa-fab__text">WhatsApp</span>
+    </a>
+
+    <div class="modal" id="searchModal" aria-hidden="true">
+      <div class="modal__backdrop" data-close="true"></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="بحث">
+        <div class="modal__head">
+          <h3 class="modal__title">بحث سريع</h3>
+          <button class="icon-btn" id="closeSearch" type="button" aria-label="إغلاق">✕</button>
+        </div>
+        <div class="modal__body">
+          <p class="muted">اكتب اسم المنتج، وهنعرض النتائج في “منتجاتنا”.</p>
+          <div class="field">
+            <label class="field__label" for="modalQuery">بحث</label>
+            <input class="field__input" id="modalQuery" type="search" placeholder="مثال: بانوراما…" />
+          </div>
+          <button class="btn btn--primary" id="applyModalQuery" type="button">بحث</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
