@@ -2,7 +2,7 @@
 
 // Matches the original site WhatsApp link:
 // `https://wa.me/00966551953000`
-const WHATSAPP_PHONE = "00966551953000";
+const WHATSAPP_PHONE = "966 58 180 8510";
 
 const SOCIALS = {
   x: "https://twitter.com/AtlasElevators?s=20",
