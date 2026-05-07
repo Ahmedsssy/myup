@@ -3,11 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>صدى البلد</title>
+    <title>مصاعد أطلس | ATLAS</title>
     <meta
       name="description"
       content="واجهة Static شبيهة بموقع Atlas Lifts (بدون Back-end) باستخدام HTML و CSS و JavaScript."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -45,9 +52,9 @@
           <a class="menu__link" href="#contact">تواصل معنا</a>
         </nav>
 
-        <a class="logo" href="#home" aria-label="مصاعد أطلس">
-          <span class="logo__badge">ATLAS</span>
-          <span class="logo__name">مصاعد أطلس</span>
+        <a class="logo" href="#home" aria-label="مصاعد صدى البلد">
+          <img class="logo__img" src="./assets/logo.png" alt="مصاعد صدى البلد" />
+          <h1 class="logo-title">مصاعد صدى البلد</h1>
         </a>
       </div>
     </header>
@@ -209,10 +216,9 @@
     <footer class="site-footer">
       <div class="container footer__inner">
         <div>
-          <div class="logo logo--footer">
-            <span class="logo__badge">ATLAS</span>
-            <span class="logo__name">مصاعد أطلس</span>
-          </div>
+          <a class="logo logo--footer" href="#home" aria-label="صدى البلد">
+            <img class="logo__img logo__img--footer" src="./assets/logo.png" alt="صدى البلد" />
+          </a>
           <p class="muted small">
             هذه نسخة Static مشابهة لواجهة الموقع الأصلي (Front-end فقط).
           </p>
